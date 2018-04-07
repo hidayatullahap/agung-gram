@@ -1,0 +1,15 @@
+columns:
+    uploader_name:
+        label: Uploader
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: Description
+        type: text
+        searchable: true
+    created_at:
+        label: 'Upload Date'
+        type: datetime
+        searchable: true
+        sortable: true

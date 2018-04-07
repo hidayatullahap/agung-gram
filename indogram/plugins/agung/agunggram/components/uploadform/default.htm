@@ -1,0 +1,31 @@
+<br><br>
+<form method="POST" action="{{ url('add-actors') }}" accept-charset="UTF8" enctype="multipart/form-data" data-request="onSave" data-request-files data-request-flash>
+    <input type="hidden" name="_handler" value="onSave">
+    {{ form_token() }}
+    {{ form_sessionKey() }}
+
+    <input type="text" name="uploader_name" value="{{user.name}}" hidden>
+
+    <!--
+    <label class="custom-file">
+        <input type="file" name="imagename" class="custom-file-input">
+        <span class="custom-file-control"></span>
+    </label><br><br><br>
+    -->
+
+    <input type="file" id="imagename" name="imagename" accept="image/*" data-request="onImageUpload" data-request-files data-request-flash>
+    <br><br>
+    <div class="form-group row">
+        <label for="description" class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="description" placeholder="your description here" required>
+        </div>
+    </div>
+    <div id="imageResult">No image to preview</div>
+    <br><br>
+    <button class="btn btn-warning" type="submit">Upload post</button>
+    
+    {% flash success %}
+        <p>{{ message }}</p>
+    {% endflash %}
+</form>

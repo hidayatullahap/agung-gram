@@ -1,0 +1,4 @@
+title: ImageUploads
+modelClass: Agung\Agunggram\Models\ImageUploads
+toolbar:
+    buttons: reorder_toolbar

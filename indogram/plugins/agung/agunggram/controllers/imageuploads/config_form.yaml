@@ -1,0 +1,10 @@
+name: ImageUploads
+form: $/agung/agunggram/models/imageuploads/imageuploads.yaml
+modelClass: Agung\Agunggram\Models\ImageUploads
+defaultRedirect: agung/agunggram/imageuploads
+create:
+    redirect: 'agung/agunggram/imageuploads/update/:id'
+    redirectClose: agung/agunggram/imageuploads
+update:
+    redirect: agung/agunggram/imageuploads
+    redirectClose: agung/agunggram/imageuploads

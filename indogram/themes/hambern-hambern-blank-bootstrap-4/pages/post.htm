@@ -1,0 +1,29 @@
+title = "post"
+url = "/post/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Agung\Agunggram\Models\ImageUploads"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "description"
+notFoundMessage = "Record not found"
+
+[session]
+security = "all"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    <img class="card-img-top" height="286" width="286" src="../storage/app/media/{{ record.imagename }}" alt="{{ record.uploader_name }}">
+    <br>
+    {{record.description}}
+    <br><br>
+    <p>Uploaded by: <strong>{{record.uploader_name}}</strong></p>
+    <p>at: <i>{{record.created_at}}</i></p>
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

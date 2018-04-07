@@ -1,0 +1,11 @@
+plugin:
+    name: 'agung.agunggram::lang.plugin.name'
+    description: 'agung.agunggram::lang.plugin.description'
+    author: agung
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Image Uploads'
+        url: agung/agunggram/imageuploads
+        icon: icon-file-image-o

@@ -1,0 +1,16 @@
+1523107941a:1:{s:8:"test.htm";a:9:{s:8:"fileName";s:8:"test.htm";s:7:"content";s:356:"title = "test"
+url = "/test"
+layout = "default"
+is_hidden = 0
+==
+
+<form action="indogram/../../../plugins/agung/agunggram/models/upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</form>
+";s:5:"mtime";i:1523107340;s:6:"markup";s:282:"<form action="indogram/../../../plugins/agung/agunggram/models/upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</form>";s:4:"code";N;s:5:"title";s:4:"test";s:3:"url";s:5:"/test";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

@@ -1,0 +1,32 @@
+description = "Navigation bar"
+==
+<title>{{this.page.baseFileName}}</title>
+<section id="navbar" class="m-b-3">
+	<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+		<div class="container">
+		    <a class="navbar-brand" href="{{ 'home'|page }}">
+			<img src="http://icons.iconarchive.com/icons/martz90/circle/512/camera-icon.png" 
+			alt="indogram" height="30" width="30" align="left"><span id="icontext">indogram</span></a>
+			<ul class="nav navbar-nav pull-xs-right">
+				<li class="nav-item{{ this.page.baseFileName == 'home' ? ' active' }}">
+					<a class="nav-link" href="{{ 'home'|page }}">Home</a>
+				</li>
+				<li class="nav-item{{ this.page.baseFileName == 'upload' ? ' active' }}">
+					<a class="nav-link" href="{{ 'upload'|page }}">Upload</a>
+				</li>
+				{% if not user %}
+				<li class="nav-item{{ this.page.baseFileName == 'login' ? ' active' }}">
+					<a class="nav-link" href="{{ 'login'|page }}">Sign In</a>
+				</li>
+				{% else %}
+				<li class="nav-item{{ this.page.baseFileName == 'login' ? ' active' }}">
+					<a class="nav-link" href="{{ 'login'|page }}">My Profile</a>
+				</li>
+				<li class="nav-item">
+				    <a class="nav-link" href="{{ 'home'|page }}" data-request="onLogout" data-request-data="redirect: '/'">Logout</a>
+				</li>
+				{% endif %}
+			</ul>
+		</div>
+	</nav>
+</section>

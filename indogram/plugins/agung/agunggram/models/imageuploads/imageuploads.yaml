@@ -1,0 +1,25 @@
+fields:
+    uploader_name:
+        label: 'Uploader Name'
+        span: left
+        type: text
+    image_name:
+        label: 'Upload Image'
+        mode: image
+        span: left
+        required: 1
+        imageWidth: '150'
+        imageHeight: '150'
+        type: mediafinder
+    description:
+        label: Description
+        span: full
+        placeholder: 'add a description'
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: description
+            type: slug
+        type: text

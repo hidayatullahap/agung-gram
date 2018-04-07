@@ -1,0 +1,13 @@
+title = "upload"
+url = "/upload"
+layout = "default"
+is_hidden = 0
+
+[session]
+security = "user"
+redirect = "login"
+
+[uploadform]
+==
+<h2>Post an image</h2>
+{% component 'uploadform' %}
